@@ -1,6 +1,7 @@
 function compute()
 {
     var principal = document.getElementById("principal").value;
+    validateprin(principal);
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     
@@ -17,6 +18,12 @@ function compute()
 
 }
 
+function validateprin(prini){
+    if (prini == "" || prini <= 0)
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+
+}
 
 
 function updateRate()
