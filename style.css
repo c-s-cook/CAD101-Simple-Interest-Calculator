@@ -1,4 +1,10 @@
-body {background-color:rgb(53, 53, 53);font-family:arial;color:white}
+body {
+    /*background-color:rgb(53, 53, 53);*/
+    background-image: linear-gradient(to right, rgb(39, 39, 39), rgb(6, 73, 0));
+    background-size: cover;
+    font-family:arial;
+    color:white
+}
 h1{color:grey;font-family:verdana}
 
 .maindiv {

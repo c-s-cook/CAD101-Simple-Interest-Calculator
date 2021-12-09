@@ -6,13 +6,13 @@
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onload="compute()">
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
 
-            Amount <input type="number"  id="principal">  <br/>
-            Rate <input type="range" onchange="updateRate()"  id="rate" min="0" max="20" default_value="10.25" step="0.25"><span id="rate_val">10.25%</span>  <br/>
-            No. of Years <select id="years">
+            <p>Amount <input type="number"  id="principal"  value="100000" onchange="compute()">  <br/>
+            <p>Rate <input type="range" onchange="updateRate()"  id="rate" min="0" max="20" default_value="7.25" value="7.25" step="0.25"><span id="rate_val">7.25%</span>  <br/>
+            <p>No. of Years <select id="years" default_value="10" onchange="compute()">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -22,13 +22,13 @@
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
-                <option value="10">10</option>
+                <option value="10" selected>10</option>
             </select>
-            <br/>
-            Interest : <span id="result"></span><br>
-
-            <button onclick="compute()">Compute Interestingly</button>
+            
             <span id="result"></span>
+
+            <!-- <button onclick="compute()">Compute Interest</button> -->
+            
         </div>
     <footer>&#169; This Calculator belongs to all who have a net worth greater than $250M</footer>
     </body>

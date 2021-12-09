@@ -10,7 +10,7 @@ function compute()
    
     //document.getElementById("result").innerHTML="<p>result" + interest +"</p>";
 
-    var resulting = "<p>If you deposit " + principal + "<br> at an interest rate of " + rate + "<br> You will receive an ammount of " + interest + "<br>in the year " + year + ".";
+    var resulting = "<p>Interest:</p><p>If you deposit <mark>$" + Intl.NumberFormat('en-US').format(principal) + "</mark><br> at an interest rate of <mark>" + rate + "%</mark><br> You will receive an amount of <mark><b>$" + Intl.NumberFormat('en-US').format(interest) + "</b></mark><br>in the year <mark>" + year + "</mark>.";
     
     document.getElementById("result").innerHTML=resulting;
     //window.alert(resulting)
@@ -22,5 +22,6 @@ function compute()
 function updateRate()
 {
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
+    document.getElementById("rate_val").innerText=rateval+"%";
+    compute();
 }
